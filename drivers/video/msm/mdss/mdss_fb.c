@@ -2335,7 +2335,7 @@ static int mdss_fb_pan_display_ex(struct fb_info *info,
 	mfd->msm_fb_backup.disp_commit = *disp_commit;
 #if defined(CONFIG_FB_MSM_MDSS_FENCE_DBG)
 	if(atomic_read(&mfd->mdp_sync_pt_data.commit_cnt) > 1);
-		xlog_fence((char*)__func__, "## pan_disp_ex:commit",
+	xlog_fence((char*)__func__, "## pan_disp_ex:commit",
 			atomic_read(&mfd->mdp_sync_pt_data.commit_cnt),
 			NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0);
 #endif

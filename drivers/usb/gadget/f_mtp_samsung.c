@@ -1734,10 +1734,10 @@ static int mtp_bind_config(struct usb_configuration *c, bool ptp_config)
 	int		status = 0;
 
 	if (strings_dev_mtp[F_MTP_IDX].id == 0) {
-		status = usb_string_id(c->cdev);
+	status = usb_string_id(c->cdev);
 
 		if (status < 0)
-			return status;
+		return status;
 
 			strings_dev_mtp[F_MTP_IDX].id = status;
 			mtpg_interface_desc.iInterface = status;

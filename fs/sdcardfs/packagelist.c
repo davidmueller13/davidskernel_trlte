@@ -47,8 +47,6 @@ static struct kmem_cache *hashtable_entry_cachep;
 
 /* Path to system-provided mapping of package name to appIds */
 static const char* const kpackageslist_file = "/data/system/packages.list";
-/* Supplementary groups to execute with */
-static const gid_t kgroups[1] = { AID_PACKAGE_INFO };
 
 static unsigned int str_hash(void *key) {
 	int i;

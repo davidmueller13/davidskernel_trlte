@@ -1328,7 +1328,7 @@ sample_attr_set_enable(struct device *dev, struct device_attribute *attr,
 		if (pst_adpd->led_en != -1)
 			gpio_set_value(pst_adpd->led_en, 1);
 		else if (!IS_ERR(pst_adpd->leda))
-			rc = regulator_enable(pst_adpd->leda);
+		rc = regulator_enable(pst_adpd->leda);
 			if (rc){
 				pr_info(KERN_ERR "%s: adpd enable failed (%d)\n",__func__, rc);
 			}
@@ -1339,7 +1339,7 @@ sample_attr_set_enable(struct device *dev, struct device_attribute *attr,
 		if (pst_adpd->led_en != -1)
 			gpio_set_value(pst_adpd->led_en, 0);
 		else if (!IS_ERR(pst_adpd->leda))
-			rc = regulator_disable(pst_adpd->leda);
+		rc = regulator_disable(pst_adpd->leda);
 			if (rc){
 				pr_info(KERN_ERR "%s: adpd disable failed (%d)\n",__func__, rc);
 			}

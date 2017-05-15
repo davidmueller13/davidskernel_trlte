@@ -1134,7 +1134,7 @@ int ghsuart_data_setup(unsigned num_ports, enum gadget_type gtype)
 
 free_ports:
 	for (i = first_port_id; i < num_data_ports; i++)
-		ghsuart_data_port_free(i);
+	ghsuart_data_port_free(i);
 		num_data_ports = first_port_id;
 
 	return ret;

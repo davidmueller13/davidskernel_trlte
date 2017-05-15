@@ -688,11 +688,6 @@ static const struct hid_device_id mhl3_mt_devices[] = {
 };
 MODULE_DEVICE_TABLE(hid, mhl3_mt_devices);
 
-static const struct hid_usage_id mt_grabbed_usages[] = {
-	{ HID_ANY_ID, HID_ANY_ID, HID_ANY_ID },
-	{ HID_ANY_ID - 1, HID_ANY_ID - 1, HID_ANY_ID - 1}
-};
-
 /* If incoming HID device is a multitouch device, this function
  * will process it instead of the normal HID connect.
  *

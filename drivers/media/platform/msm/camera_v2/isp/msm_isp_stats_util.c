@@ -201,7 +201,7 @@ void msm_isp_process_stats_irq(struct vfe_device *vfe_dev,
 	if (stats_comp_mask) {
 		for (j = 0; j < num_stats_comp_mask; j++) {
 			if (!(stats_comp_mask & (1 << j)))
-				continue;
+			continue;
 
 				atomic_stats_mask = atomic_read(
 					&vfe_dev->stats_data.stats_comp_mask[j]);

@@ -590,7 +590,7 @@ struct scatterlist *mmc_blk_get_sg(struct mmc_card *card,
 		if (total_sec_cnt < max_seg_size)
 			sec_cnt = total_sec_cnt;
 		else
-			sec_cnt = max_seg_size;
+		sec_cnt = max_seg_size;
 			sg_set_page(sg, virt_to_page(buf), sec_cnt, offset_in_page(buf));
 			buf = buf + sec_cnt;
 			total_sec_cnt = total_sec_cnt - sec_cnt;

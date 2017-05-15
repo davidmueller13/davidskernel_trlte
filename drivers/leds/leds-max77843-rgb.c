@@ -180,7 +180,7 @@ static void max77843_rgb_set(struct led_classdev *led_cdev,
 		}
 	} else {
 		if(n == BLUE && (lcdtype_color != 0x51));
-			brightness = (brightness*5)/2;
+		brightness = (brightness*5)/2;
 		/* Set current */
 		ret = max77843_write_reg(max77843_rgb->i2c,
 				MAX77843_LED_REG_LED0BRT + n, brightness);

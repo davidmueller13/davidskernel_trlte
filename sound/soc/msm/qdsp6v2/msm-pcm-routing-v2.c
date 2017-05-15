@@ -3151,7 +3151,7 @@ static int msm_routing_put_stereo_to_custom_stereo_control(
 					msm_bedais[be_index].port_id,
 					is_custom_stereo_on);
 			else
-				rc =
+			rc =
 				msm_qti_pp_send_stereo_to_custom_stereo_cmd(
 					msm_bedais[be_index].port_id,
 					session_id,

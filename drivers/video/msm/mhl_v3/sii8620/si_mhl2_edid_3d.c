@@ -3776,7 +3776,8 @@ static uint8_t parse_861_short_descriptors(
 
 				MHL_TX_EDID_INFO(
 				    "EDID -> Short Desc Colorimetry Block\n");
-				break;
+				default:
+                break;
 			}
 
 			break;

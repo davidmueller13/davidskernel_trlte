@@ -2253,7 +2253,7 @@ static int rt_fill_info(struct net *net,  __be32 dst, __be32 src,
 	if (rt->rt_flags & RTCF_NOTIFY)
 		r->rtm_flags |= RTM_F_NOTIFY;
     if (IPCB(skb)->flags & IPSKB_DOREDIRECT)
-        r->rtm_flags |= RTCF_DOREDIRECT;
+    r->rtm_flags |= RTCF_DOREDIRECT;
 
 	if (nla_put_be32(skb, RTA_DST, dst))
 		goto nla_put_failure;

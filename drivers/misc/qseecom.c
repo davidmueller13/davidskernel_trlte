@@ -1680,7 +1680,7 @@ static int __qseecom_update_cmd_buf(void *msg, bool cleanup,
 			if (cleanup)
 				*update = 0;
 			else
-				*update = (uint32_t)sg_dma_address(
+			*update = (uint32_t)sg_dma_address(
 							sg_ptr->sgl);
 				len += (uint32_t)sg->length;
 		} else {

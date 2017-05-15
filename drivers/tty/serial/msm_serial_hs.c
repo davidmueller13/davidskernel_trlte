@@ -2563,7 +2563,7 @@ static int msm_hs_startup(struct uart_port *uport)
 				      DMA_TO_DEVICE);
 
     if (pdev->id == 0)
-        printk(KERN_ERR "(msm_serial_hs) msm_hs_startup - dma wake lock\n");
+      printk(KERN_ERR "(msm_serial_hs) msm_hs_startup - dma wake lock\n");
 
 	wake_lock(&msm_uport->dma_wake_lock);
 	/* turn on uart clk */

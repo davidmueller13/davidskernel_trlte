@@ -104,8 +104,6 @@ MODULE_DESCRIPTION("Android Composite USB Driver");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("1.0");
 
-static const char longname[] = "Gadget Android";
-
 #ifdef CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE
 static int composite_string_index;
 #endif
@@ -2495,7 +2493,7 @@ static void mass_storage_function_enable(struct android_usb_function *f)
 		while (b) {
 			lun_type = strsep(&b, ",");
 			if (lun_type)
-				number_of_luns =
+			number_of_luns =
 					mass_storage_lun_init(f, lun_type);
 				if (number_of_luns <= 0)
 					return;
